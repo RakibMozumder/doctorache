@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .review-box {
+        background: #f9f9f9;
+        border-left: 4px solid #4c1d95;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      .review-stars {
+        font-weight: bold;
+        color: #f59e0b;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" a lt="Clinic Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all-doctors.html">Find Doctor</a></li>
+          <li><a href="bookapointment.html">Book Appointment</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container" id="profileContainer">
+      <!-- Doctor details will be loaded here -->
+    </div>
+
+    <div class="rating-section">
+      <h3>⭐ Rate & Review this Doctor</h3>
+      <div id="starRating">
+        <span data-rate="1">★</span>
+        <span data-rate="2">★</span>
+        <span data-rate="3">★</span>
+        <span data-rate="4">★</span>
+        <span data-rate="5">★</span>
+      </div>
+      <textarea
+        id="reviewText"
+        placeholder="Write a short review..."
+      ></textarea>
+      <button id="submitReview">Submit Review</button>
+
+      <h4>Reviews</h4>
+      <ul id="reviewsList"></ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 DoctorAche. All rights reserved.</p>
+    </footer>
+
+    <script src="doctor-data.js"></script>
+    <script src="doctor-profile.js"></script>
+  </body>
+</html>

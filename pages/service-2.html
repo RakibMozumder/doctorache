@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Service Details | DoctorAche</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .service-page {
+        padding: 60px 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .service-page img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .service-page h1 {
+        font-size: 32px;
+        color: #4c1d95;
+        margin-bottom: 10px;
+      }
+
+      .service-meta {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 20px;
+      }
+
+      .service-page p,
+      .service-page li {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333;
+      }
+
+      .service-page ul,
+      .service-page ol {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="../index.html" class="logo">
+            <img src="../images/logo.png" alt="Clinic Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../all-doctors.html">Find Doctor</a></li>
+          <li><a href="../bookapointment.html">Book Appointment</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Service Details -->
+    <div class="service-page">
+      <img src="../images/doctor1.jpg" alt="Dental Service" />
+      <h1>Dental Care</h1>
+      <div class="service-meta">Updated: July 2025</div>
+      <p>
+        Our dental care service ensures healthy teeth and gums. From routine
+        checkups to complex dental surgeries, our skilled dentists offer
+        personalized care.
+      </p>
+
+      <h3>Services Offered:</h3>
+      <ul>
+        <li>Teeth Cleaning & Polishing</li>
+        <li>Root Canal Therapy</li>
+        <li>Dental Implants</li>
+        <li>Braces & Aligners</li>
+      </ul>
+
+      <p>
+        We use modern equipment and technology to make your experience smooth
+        and pain-free. Your smile is our top priority.
+      </p>
+      <a href="#" class="cta-button">Book Now</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 DoctorAche. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Responsive navbar toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

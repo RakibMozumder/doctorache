@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoctorAche- Healthcare Solutions</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* or your preferred height */
+        overflow: hidden;
+      }
+
+      .slide {
+        display: none;
+        position: relative;
+      }
+
+      .slide.active {
+        display: block;
+      }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.4); /* Optional for contrast */
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 90%;
+      }
+
+      .cta-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 20px;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+      /* new */
+
+      .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        background: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* slightly darker for better readability */
+        padding: 30px 40px;
+        border-radius: 12px;
+        max-width: 90%;
+        width: 600px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(6px);
+        animation: fadeInUp 1s ease-out;
+      }
+
+      /* Optional: animate overlay text appearance */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translate(-50%, -40%);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .overlay-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .overlay-text p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background: #28a745;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 6px;
+        transition: background 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background: #218838;
+      }
+
+      @media (max-width: 600px) {
+        .overlay-text {
+          padding: 20px;
+          width: 810%;
+        }
+
+        .overlay-text h1 {
+          font-size: 1.7rem;
+        }
+
+        .overlay-text p {
+          font-size: 1rem;
+        }
+
+        .cta-button {
+          font-size: 0.95rem;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+
+    <!-- <header>
+      <nav class="navbar">
+        <div class="logo-div">
+          <div class="logo">DoctorAche</div>
+          <div class="language">
+            <button class="lng-button">English</button>
+            <button class="lng-button">বাংলা</button>
+          </div>
+          <div class="hamburger" id="hamburger">&#9776;</div>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="all-doctors.html">Find Doctor</a></li>
+          <li><a href="bookapointment.html">Book Appointment</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header> -->
+
+    <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" a lt="Clinic Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="all-doctors.html">Find Doctor</a></li>
+          <li><a href="bookapointment.html">Book Appointment</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- In index.html -->
+
+    <section id="home" class="landing">
+      <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img
+            src="images/hero1_istockphoto-1190166933-1024x1024.jpg"
+            alt="Healthcare Slide 1"
+          />
+          <div class="overlay-text">
+            <h1>Welcome to DoctorAche</h1>
+            <p>Your Complete Healthcare Solutions at Home and Beyond</p>
+            <a href="bookapointment.html" class="cta-button"
+              >Book an Appointment</a
+            >
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img
+            src="images/hero2_istockphoto-1190166020-1024x1024.jpg"
+            alt="Healthcare Slide 2"
+          />
+          <div class="overlay-text">
+            <h1>Your Health, Our Priority</h1>
+            <p>
+              Find experienced doctors. Book appointments instantly. Get care
+              that truly cares.
+            </p>
+            <a href="bookapointment.html" class="cta-button"
+              >Book an Appointment</a
+            >
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img
+            src="images/hero3_istockphoto-1190166359-1024x1024.jpg"
+            alt="Healthcare Slide 3"
+          />
+          <div class="overlay-text">
+            <h1>Need a Doctor? We’re Here for You.</h1>
+            <p>Search by specialty, check availability, and book instantly.</p>
+            <a href="bookapointment.html" class="cta-button"
+              >Book an Appointment</a
+            >
+          </div>
+        </div>
+
+        <!-- Arrows -->
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+
+        <!-- Dots -->
+        <div class="dots-container">
+          <span class="dot" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="carousel-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="caption">Our Services</h2>
+          <a href="all-services.html" class="view-all-link">View All &rarr;</a>
+        </div>
+        <div class="carousel" id="servicesCarousel">
+          <!-- Each card is a service -->
+          <a class="card" href="pages/emergency.html">
+            <img src="images/Emergency Doctor.png" alt="Emergency" />
+            <h3>Emergency Doctor</h3>
+          </a>
+          <!-- Add others similarly -->
+          <a class="card" href="pages/service-2.html">
+            <img src="images/Caregiver-BpDFB7hA.jpeg" alt="ICU Info" />
+            <h3>ICU, CCU, NICU, PICU, HDU Information</h3>
+          </a>
+          <div class="card">
+            <a href="service-details.html?id=3">
+              <img
+                src="images/Physiotherapist-_CVb66B4.jpeg"
+                alt="Cardiology"
+              />
+              <h3>Cardiology</h3>
+            </a>
+          </div>
+          <div class="card">
+            <a href="service-details.html?id=4">
+              <div class="card-image">
+                <img src="images/doctor4.jpg" alt="Cardiology" />
+              </div>
+              <div class="card-content">
+                <h3>Cardiology2</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="card">
+            <img
+              src="images/Dietitian_Nutritionist-D_B6hAVx.jpeg"
+              alt="Specialist Doctor"
+            />
+            <h3>Specialist Doctor Consultation</h3>
+          </div>
+          <div class="card">
+            <img src="images/Caregiver-BpDFB7hA.jpeg" alt="Home Doctor Visit" />
+            <h3>Home Doctor Visit</h3>
+          </div>
+          <div class="card">
+            <img
+              src="images/Dietitian_Nutritionist-D_B6hAVx.jpeg"
+              alt="Ambulance"
+            />
+            <h3>Ambulance Service & Doctor</h3>
+          </div>
+          <div class="card">
+            <img
+              src="images/Gynaecologist_Obstetrician-ClHod_bn.jpeg"
+              alt="Care"
+            />
+            <h3>Care Giving Services</h3>
+          </div>
+          <div class="card">
+            <img src="images/Physiotherapist-_CVb66B4.jpeg" alt="Home Lab" />
+            <h3>Home Lab Test</h3>
+          </div>
+          <div class="card">
+            <img src="images/Specialist doctor.jpeg" alt="Injectables" />
+            <h3>Injectable Medicine at Home</h3>
+          </div>
+          <div class="card">
+            <img
+              src="images/icu istockphoto-1560100163-612x612.jpg"
+              alt="Hospital Visit"
+            />
+            <h3>Hospital Visit Assistance</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="doctors" class="doctors-section">
+      <div class="doctors-header">
+        <h2 class="caption">Our Doctors</h2>
+        <a href="all-doctors.html" class="view-all-link">View All &rarr;</a>
+      </div>
+
+      <div class="slider-wrapper">
+        <div class="doctor-slider" id="doctorSlider">
+          <!-- Doctor cards injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="carousel-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="caption">💬 Patient Testimonials</h2>
+          <a href="all-testimonials.html" class="view-all-link"
+            >View All &rarr;</a
+          >
+        </div>
+        <div class="carousel" id="testimonialSlider2">
+          <div class="slider-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Patient 1"
+            />
+            <p>
+              "The booking process was very easy and the doctor was incredibly
+              kind and knowledgeable. Highly recommend!"
+            </p>
+            <div class="testimonial-meta">
+              <strong>Farzana Rahman</strong>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img
+              src="https://randomuser.me/api/portraits/men/47.jpg"
+              alt="Patient 2"
+            />
+            <p>
+              "I got a video consultation within minutes. It felt personal and
+              helpful, even from home!"
+            </p>
+            <div class="testimonial-meta">
+              <strong>Rakib Hossain</strong>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/33.jpg"
+              alt="Patient 3"
+            />
+            <p>
+              "I love that I can view doctor profiles before booking. The system
+              is very user-friendly."
+            </p>
+            <div class="testimonial-meta">
+              <strong>Nasrin Jahan</strong>
+              <span>⭐⭐⭐⭐</span>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Patient 1"
+            />
+            <p>
+              "The booking process was very easy and the doctor was incredibly
+              kind and knowledgeable. Highly recommend!"
+            </p>
+            <div class="testimonial-meta">
+              <strong>Farzana Rahman</strong>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img
+              src="https://randomuser.me/api/portraits/men/47.jpg"
+              alt="Patient 2"
+            />
+            <p>
+              "I got a video consultation within minutes. It felt personal and
+              helpful, even from home!"
+            </p>
+            <div class="testimonial-meta">
+              <strong>Rakib Hossain</strong>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/33.jpg"
+              alt="Patient 3"
+            />
+            <p>
+              "I love that I can view doctor profiles before booking. The system
+              is very user-friendly."
+            </p>
+            <div class="testimonial-meta">
+              <strong>Nasrin Jahan</strong>
+              <span>⭐⭐⭐⭐</span>
+            </div>
+          </div>
+          <div class="slider-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Patient 1"
+            />
+            <p>
+              "The booking process was very easy and the doctor was incredibly
+              kind and knowledgeable. Highly recommend!"
+            </p>
+            <div class="testimonial-meta">
+              <strong>Farzana Rahman</strong>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img
+              src="https://randomuser.me/api/portraits/men/47.jpg"
+              alt="Patient 2"
+            />
+            <p>
+              "I got a video consultation within minutes. It felt personal and
+              helpful, even from home!"
+            </p>
+            <div class="testimonial-meta">
+              <strong>Rakib Hossain</strong>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/33.jpg"
+              alt="Patient 3"
+            />
+            <p>
+              "I love that I can view doctor profiles before booking. The system
+              is very user-friendly."
+            </p>
+            <div class="testimonial-meta">
+              <strong>Nasrin Jahan</strong>
+              <span>⭐⭐⭐⭐</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blogs" class="carousel-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="caption">🩺 Health Blog</h2>
+          <a href="all-blogs.html" class="view-all-link">View All &rarr;</a>
+        </div>
+        <div class="carousel" id="blogSlider2">
+          <!-- Example Blog Card -->
+          <div class="slider-card">
+            <img src="images/doctor1.jpg" alt="blog 1" />
+            <div class="blog-content">
+              <h3>5 Tips for a Healthy Heart</h3>
+              <p>
+                Heart health is essential. Learn simple daily habits that can
+                keep your heart strong and healthy for years to come.
+              </p>
+              <span class="blog-meta">by Dr. Farzana • July 2025</span>
+              <a href="blog-post.html?id=1" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img src="images/doctor2.jpg" alt="blog 2" />
+            <div class="blog-content">
+              <h3>When to See a Specialist?</h3>
+              <p>
+                Knowing when to consult a specialist can save time and improve
+                treatment. Here’s how to decide when a GP isn’t enough.
+              </p>
+              <span class="blog-meta">by Dr. Hasan • July 2025</span>
+              <a href="blog-post.html?id=2" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img src="images/doctor3.jpg" alt="blog 3" />
+            <div class="blog-content">
+              <h3>Top 10 Women’s Health Tips</h3>
+              <p>
+                From mental health to reproductive care — these women’s wellness
+                tips are essential for every stage of life.
+              </p>
+              <span class="blog-meta">by Dr. Laila • July 2025</span>
+              <a href="blog-post.html?id=3" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img src="images/doctor1.jpg" alt="blog 1" />
+            <div class="blog-content">
+              <h3>5 Tips for a Healthy Heart</h3>
+              <p>
+                Heart health is essential. Learn simple daily habits that can
+                keep your heart strong and healthy for years to come.
+              </p>
+              <span class="blog-meta">by Dr. Farzana • July 2025</span>
+              <a href="blog-post.html?id=1" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img src="images/doctor2.jpg" alt="blog 2" />
+            <div class="blog-content">
+              <h3>When to See a Specialist?</h3>
+              <p>
+                Knowing when to consult a specialist can save time and improve
+                treatment. Here’s how to decide when a GP isn’t enough.
+              </p>
+              <span class="blog-meta">by Dr. Hasan • July 2025</span>
+              <a href="blog-post.html?id=2" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img src="images/doctor3.jpg" alt="blog 3" />
+            <div class="blog-content">
+              <h3>Top 10 Women’s Health Tips</h3>
+              <p>
+                From mental health to reproductive care — these women’s wellness
+                tips are essential for every stage of life.
+              </p>
+              <span class="blog-meta">by Dr. Laila • July 2025</span>
+              <a href="blog-post.html?id=3" class="read-more">Read More →</a>
+            </div>
+          </div>
+          <div class="slider-card">
+            <img src="images/doctor1.jpg" alt="blog 1" />
+            <div class="blog-content">
+              <h3>5 Tips for a Healthy Heart</h3>
+              <p>
+                Heart health is essential. Learn simple daily habits that can
+                keep your heart strong and healthy for years to come.
+              </p>
+              <span class="blog-meta">by Dr. Farzana • July 2025</span>
+              <a href="blog-post.html?id=1" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img src="images/doctor2.jpg" alt="blog 2" />
+            <div class="blog-content">
+              <h3>When to See a Specialist?</h3>
+              <p>
+                Knowing when to consult a specialist can save time and improve
+                treatment. Here’s how to decide when a GP isn’t enough.
+              </p>
+              <span class="blog-meta">by Dr. Hasan • July 2025</span>
+              <a href="blog-post.html?id=2" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img src="images/doctor3.jpg" alt="blog 3" />
+            <div class="blog-content">
+              <h3>Top 10 Women’s Health Tips</h3>
+              <p>
+                From mental health to reproductive care — these women’s wellness
+                tips are essential for every stage of life.
+              </p>
+              <span class="blog-meta">by Dr. Laila • July 2025</span>
+              <a href="blog-post.html?id=3" class="read-more">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>📞 Get in Touch</h2>
+          <p>
+            Have questions, feedback, or need assistance? Reach out to us
+            anytime!
+          </p>
+          <ul>
+            <li>
+              <strong>📍 Address:</strong> 123 Health Street, Dhaka, Bangladesh
+            </li>
+            <li><strong>📞 Phone:</strong> +880 1234-567890</li>
+            <li><strong>📧 Email:</strong> care@yourclinic.com</li>
+          </ul>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <h3>Send Us a Message</h3>
+            <input
+              type="text"
+              id="contactName"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              id="contactEmail"
+              placeholder="Your Email"
+              required
+            />
+            <input
+              type="text"
+              id="contactSubject"
+              placeholder="Subject"
+              required
+            />
+            <textarea
+              id="contactMessage"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 DoctorsPoint. All rights reserved.</p>
+    </footer>
+
+    <!-- scrollTopBtn (Bottom Right) -->
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+    <!-- Floating Hotline (Top Right) -->
+    <div id="hotline-float">
+      📞 Hotline: <a href="tel:+8801647511521">+880 1647511521</a>
+    </div>
+
+    <!-- Floating Schedule Consultation Button (Bottom Center) -->
+    <a href="bookapointment.html" id="consultation-float"
+      >Schedule a Consultation</a
+    >
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <script src="hamburger.js"></script>
+    <script src="landingslide.js"></script>
+    <script src="serviceslider.js"></script>
+    <script src="scroll active.js"></script>
+    <script src="scrolltop.js"></script>
+    <script src="preloader.js"></script>
+    <script src="doctor-data.js"></script>
+    <script src="doctorslide.js"></script>
+    <script src="contactform.js"></script>
+    <script src="commonSlider.js"></script>
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".slide-wrapper");
+      const dots = document.querySelectorAll(".dot");
+      const prev = document.querySelector(".prev");
+      const next = document.querySelector(".next");
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.display = i === index ? "block" : "none";
+          dots[i].classList.toggle("active", i === index);
+        });
+        slideIndex = index;
+      }
+
+      function nextSlide() {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+      }
+
+      function prevSlide() {
+        slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+        showSlide(slideIndex);
+      }
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          const index = parseInt(dot.dataset.index);
+          showSlide(index);
+        });
+      });
+
+      next.addEventListener("click", nextSlide);
+      prev.addEventListener("click", prevSlide);
+
+      // Auto-play
+      setInterval(nextSlide, 5000); // Change slide every 5s
+
+      // Initial load
+      showSlide(0);
+    </script>
+  </body>
+</html>

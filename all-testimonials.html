@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Testimonials | DoctorAche</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9ff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .all-testimonials {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .all-testimonials h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #4c1d95;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .testimonial-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .testimonial-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      .testimonial-card p {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+
+      .testimonial-meta {
+        font-size: 14px;
+        color: #444;
+      }
+
+      .testimonial-meta strong {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #1e293b;
+      }
+
+      @media screen and (max-width: 600px) {
+        .testimonial-card p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Clinic Logo" />
+          </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all-doctors.html">Find Doctor</a></li>
+          <li><a href="bookapointment.html">Book Appointment</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="all-testimonials">
+      <h1>What Our Patients Say</h1>
+      <div class="testimonials-grid" id="testimonialContainer">
+        <!-- Cards will be added via JavaScript -->
+      </div>
+    </main>
+
+    <footer>
+      <p style="text-align: center; padding: 20px">
+        &copy; 2025 DoctorAche. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="testimonials-data.js"></script>
+    <script>
+      const testimonials = testimonialsData || [];
+      const container = document.getElementById("testimonialContainer");
+
+      testimonials.forEach((t) => {
+        const card = document.createElement("div");
+        card.className = "testimonial-card";
+        card.innerHTML = `
+        <img src="${t.image}" alt="${t.name}" />
+        <p>"${t.message}"</p>
+        <div class="testimonial-meta">
+          <strong>${t.name}</strong>
+          <span>${t.rating}</span>
+        </div>
+      `;
+        container.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

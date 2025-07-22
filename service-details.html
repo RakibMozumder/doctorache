@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Service Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .service-post-page {
+        padding: 60px 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .service-post-page img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .service-post-page h1 {
+        font-size: 32px;
+        color: #4c1d95;
+        margin-bottom: 10px;
+      }
+
+      .service-post-page p,
+      .service-post-page li {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333;
+      }
+
+      .service-post-page ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Clinic Logo" />
+          </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all-doctors.html">Find Doctor</a></li>
+          <li><a href="bookapointment.html">Book Appointment</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="service-post-page">
+      <img id="serviceImage" alt="Service Image" />
+      <h1 id="serviceTitle">Loading...</h1>
+      <div id="serviceContent"></div>
+      <a href="#" class="cta-button">Book Now</a>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 DoctorAche. All rights reserved.</p>
+    </footer>
+
+    <script src="service-data.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const serviceId = parseInt(params.get("id"));
+      const service = servicePosts.find((s) => s.id === serviceId);
+
+      if (service) {
+        document.getElementById("serviceImage").src = service.image;
+        document.getElementById("serviceTitle").textContent = service.title;
+        document.getElementById("serviceContent").innerHTML = service.content;
+      } else {
+        document.body.innerHTML =
+          "<h2 style='text-align:center;'>Service not found.</h2>";
+      }
+    </script>
+  </body>
+</html>

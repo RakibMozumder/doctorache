@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Doctors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+     <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" a lt="Clinic Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#find-doctor">Find Doctor</a></li>
+          <li><a href="bookapointment.html">Book Appointment</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      </nav>
+    </header>
+
+
+    <section id="find-doctor" class="form-section">
+      <h2>Find a Doctor</h2>
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="🔍 Search by name or specialty..."
+          id="search-input"
+        />
+      </div>
+      <div id="doctor-results" class="doctor-cards"></div>
+    </section>
+
+    <div class="container">
+      <h2 class="caption">All Available Doctors</h2>
+      <div id="allDoctors" class="doctor-cards"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 DoctorAche. All rights reserved.</p>
+    </footer>
+
+    <!-- find doctor -->
+    <script src="doctor-data.js"></script>
+    <script>
+      const searchInput = document.getElementById("search-input");
+      const resultsContainer = document.getElementById("doctor-results");
+
+      // Load all reviews
+      const allReviews =
+        JSON.parse(localStorage.getItem("doctorReviews")) || [];
+
+      // Display matching results
+      function displayDoctors(filteredDoctors) {
+        resultsContainer.innerHTML = "";
+
+        if (filteredDoctors.length === 0) {
+          resultsContainer.innerHTML = "<p>No doctors found.</p>";
+          return;
+        }
+
+        filteredDoctors.forEach((doc) => {
+          const docReviews = allReviews.filter((r) => r.doctorId === doc.id);
+          const avgRating = docReviews.length
+            ? (
+                docReviews.reduce((sum, r) => sum + r.rating, 0) /
+                docReviews.length
+              ).toFixed(1)
+            : "No ratings";
+
+        const card = document.createElement("div");
+        card.className = "doctor-card";
+        card.innerHTML = `
+        <img src="${doc.image}" alt="${doc.name}" />
+        <h3>${doc.name}</h3>
+        <p>${doc.specialty}</p>
+        <p>${doc.availability}</p>
+        <p>⭐ ${avgRating === "No ratings" ? avgRating : `${avgRating}/5`}</p>
+        <a href="doctor-profile.html?id=${
+          doc.id
+        }" class="btn-view">View Profile</a>
+      `;
+          resultsContainer.appendChild(card);
+        });
+      }
+
+      // Initial render: show all doctors
+      // displayDoctors(doctors);
+
+      // Filter in real-time as user types
+      searchInput.addEventListener("input", () => {
+        const term = searchInput.value.toLowerCase().trim();
+        const filtered = doctors.filter(
+          (doc) =>
+            doc.name.toLowerCase().includes(term) ||
+            doc.specialty.toLowerCase().includes(term)
+        );
+        displayDoctors(filtered);
+      });
+    </script>
+    <!-- //all doctor -->
+    <script src="doctor-data.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("allDoctors");
+
+        const allReviews =
+          JSON.parse(localStorage.getItem("doctorReviews")) || [];
+
+        doctors.forEach((doc) => {
+          const docReviews = allReviews.filter((r) => r.doctorId === doc.id);
+          const avgRating = docReviews.length
+            ? (
+                docReviews.reduce((sum, r) => sum + r.rating, 0) /
+                docReviews.length
+              ).toFixed(1)
+            : "No ratings";
+
+          const card = document.createElement("div");
+          card.className = "doctor-card";
+          card.innerHTML = `
+        <img src="${doc.image}" alt="${doc.name}" />
+        <h3>${doc.name}</h3>
+        <p>${doc.specialty}</p>
+        <p>${doc.availability}</p>
+        <p>⭐ ${avgRating === "No ratings" ? avgRating : `${avgRating}/5`}</p>
+        <a href="doctor-profile.html?id=${
+          doc.id
+        }" class="btn-view">View Profile</a>
+      `;
+          container.appendChild(card);
+        });
+      });
+    </script>
+  </body>
+</html>

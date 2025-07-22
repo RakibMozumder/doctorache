@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoctorAche- Healthcare Solutions</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* General navbar styling */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        position: relative;
+        z-index: 10;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+
+      /* Nav Links */
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .btn-primary {
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: #fff !important;
+        border-radius: 5px;
+        font-size: 0.95rem;
+      }
+
+      /* Hamburger button */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+      }
+
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #333;
+        border-radius: 3px;
+      }
+
+      /* Mobile/Tablet */
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+
+        .nav-links {
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background: #fff;
+          width: 100%;
+          display: none;
+          padding: 1rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .nav-links li {
+          margin: 0.8rem 0;
+        }
+
+        .btn-primary {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+
+    <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" a lt="Clinic Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all-doctors.html">Find Doctor</a></li>
+          <li><a href="bookapointment.html">Book Appointment</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about" class="about-section">
+      <h2 class="caption">About Us</h2>
+      <p>
+        We are committed to providing high-quality, accessible healthcare. Our
+        platform connects patients with certified doctors for online and
+        in-person consultations.
+      </p>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 DoctorAche. All rights reserved.</p>
+    </footer>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

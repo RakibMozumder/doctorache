@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Services | DoctorAche</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .all-services {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .all-services h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #4c1d95;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .service-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .service-card-content {
+        padding: 20px;
+      }
+
+      .service-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .service-card p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      @media screen and (max-width: 768px) {
+        .service-card img {
+          height: 160px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" a lt="Clinic Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all-doctors.html">Find Doctor</a></li>
+          <li><a href="bookapointment.html">Book Appointment</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="all-services">
+      <h1>Our Services</h1>
+      <div class="services-grid" id="servicesContainer">
+        <!-- Services will be injected via JS -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 DoctorAche. All rights reserved.</p>
+    </footer>
+
+    <script src="services-data.js"></script>
+    <script>
+      const servicesContainer = document.getElementById("servicesContainer");
+
+      servicesData.forEach((service) => {
+        const card = document.createElement("div");
+        card.className = "service-card";
+        card.innerHTML = `
+        <a href="service-details.html?id=${service.id}">
+          <img src="${service.image}" alt="${service.title}" />
+          <div class="service-card-content">
+            <h3>${service.title}</h3>
+            <p>${service.shortDescription}</p>
+          </div>
+        </a>
+      `;
+        servicesContainer.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoctorAche- Healthcare Solutions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" a lt="Clinic Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all-doctors.html">Find Doctor</a></li>
+          <li><a href="#appointment">Book Appointment</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="appointment" class="appointment-form">
+      <h2>Book an Appointment</h2>
+      <form id="appointmentForm">
+        <input type="text" id="name" placeholder="Your Name" />
+        <div class="error" id="error-name"></div>
+
+        <input type="email" id="email" placeholder="Your Email" />
+        <div class="error" id="error-email"></div>
+
+        <input type="tel" id="phone" placeholder="Phone Number" />
+        <div class="error" id="error-phone"></div>
+
+        <select id="service">
+          <option value="">Select Service</option>
+          <option value="General Checkup">General Checkup</option>
+          <option value="Specialist">Specialist</option>
+        </select>
+        <div class="error" id="error-service"></div>
+
+        <input type="date" id="date" />
+        <div class="error" id="error-date"></div>
+
+        <button type="submit">Book Appointment</button>
+      </form>
+
+      <div id="appointmentMessage"></div>
+      <!-- Toast Notification -->
+      <div id="toast" class="toast">✅ Appointment Booked Successfully!</div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 DoctorAche. All rights reserved.</p>
+    </footer>
+    <script src="bookappointment.js"></script>
+  </body>
+</html>

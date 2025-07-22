@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Health Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .blog-post-page {
+        padding: 60px 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .blog-post-page img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .blog-post-page h1 {
+        font-size: 32px;
+        color: #4c1d95;
+        margin-bottom: 10px;
+      }
+
+      .blog-meta {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 20px;
+      }
+
+      .blog-post-page p,
+      .blog-post-page li {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333;
+      }
+
+      .blog-post-page ul,
+      .blog-post-page ol {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+     <header>
+      <nav class="navbar container">
+        <div class="navbar-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" a lt="Clinic Logo" />
+          </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all-doctors.html">Find Doctor</a></li>
+          <li><a href="bookapointment.html">Book Appointment</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    
+    <div class="blog-post-page">
+      <img id="blogImage" alt="Blog Image" />
+      <h1 id="blogTitle">Loading...</h1>
+      <div class="blog-meta" id="blogMeta"></div>
+      <div id="blogContent"></div>
+    </div>
+
+     <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 DoctorAche. All rights reserved.</p>
+    </footer>
+
+    <script src="blog-data.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const blogId = parseInt(params.get("id"));
+      const post = blogPosts.find((p) => p.id === blogId);
+
+      if (post) {
+        document.getElementById("blogImage").src = post.image;
+        document.getElementById("blogTitle").textContent = post.title;
+        document.getElementById(
+          "blogMeta"
+        ).textContent = `By ${post.author} • ${post.date}`;
+        document.getElementById("blogContent").innerHTML = post.content;
+      } else {
+        document.body.innerHTML =
+          "<h2 style='text-align:center;'>Blog post not found.</h2>";
+      }
+    </script>
+  </body>
+</html>
