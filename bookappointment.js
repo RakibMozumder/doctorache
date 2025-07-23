@@ -83,7 +83,7 @@ document
       // ✅ Send to backend (MongoDB)
       try {
         const response = await fetch(
-          "http://localhost:5000/api/appointments",
+          "https://doctorache-backend.onrender.com/api/appointments",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
