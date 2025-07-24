@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Health Blog</title>
     <link rel="stylesheet" href="style.css" />
     <style>
@@ -45,8 +46,7 @@
     </style>
   </head>
   <body>
-
-     <header>
+    <header>
       <nav class="navbar container">
         <div class="navbar-brand">
           <a href="index.html" class="logo">
@@ -69,7 +69,6 @@
       </nav>
     </header>
 
-    
     <div class="blog-post-page">
       <img id="blogImage" alt="Blog Image" />
       <h1 id="blogTitle">Loading...</h1>
@@ -77,11 +76,11 @@
       <div id="blogContent"></div>
     </div>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 DoctorAche. All rights reserved.</p>
     </footer>
-
+    <script src="hamburger.js"></script>
     <script src="blog-data.js"></script>
     <script>
       const params = new URLSearchParams(window.location.search);
