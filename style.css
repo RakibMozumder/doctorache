@@ -1172,6 +1172,7 @@ footer {
 
   .prev,
   .next {
+    z-index: 9;
     font-size: 28px;
     padding: 6px;
   }
