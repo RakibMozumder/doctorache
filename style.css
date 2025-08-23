@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -13,6 +14,9 @@ body {
   background-color: #f7f9fc;
   color: #333;
   line-height: 1.6;
+}
+.container {
+  padding: 5px 5px;
 }
 .caption {
   text-align: center;
@@ -264,10 +268,6 @@ body {
 }
 
 /* === Services Grid === */
-.container {
-  padding: 20px 20px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -374,7 +374,7 @@ body {
 .card {
   min-width: 220px;
   flex-shrink: 0;
-  background: white;
+  background: #f9f9ff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -428,11 +428,6 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-}
-
-.doctors-header h2 {
-  font-size: 28px;
-  color: #4c1d95;
 }
 
 /* doctor new sec */
@@ -502,18 +497,6 @@ body {
   padding: 3rem 1rem;
   background-color: #f9f9f9;
   position: relative;
-}
-
-.doctors-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.doctors-header h2 {
-  font-size: 2rem;
-  color: #333;
 }
 
 .view-all-link {
@@ -991,19 +974,10 @@ body {
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-  #scrollTopBtn {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 16px;
-    font-size: 18px;
-  }
-}
-
 /* Floating Hotline */
 #hotline-float {
   position: fixed;
-  bottom: 15px;
+  bottom: 50px;
   left: 15px;
   background-color: #fff7ed;
   color: #b45309;
@@ -1028,7 +1002,7 @@ body {
 /* Floating Consultation Button */
 #consultation-float {
   position: fixed;
-  bottom: 25px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #5b21b6;
@@ -1119,8 +1093,179 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive Navbar */
+.bottom-nav {
+  display: none;
+}
+/* service */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns on larger screens */
+  gap: 15px;
+  overflow: hidden;
+}
+
+#services-grid {
+  margin: 20px 0px;
+}
+.light-green-bg {
+  background-color: #e8f5e9;
+}
+.light-yellow-bg {
+  background-color: #fffde7;
+}
+.light-pink-bg {
+  background-color: #fce4ec;
+}
+.light-orange-bg {
+  background-color: #fff3e0;
+}
+.grid-card {
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.service2-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1em;
+}
+.service2-card p {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #555;
+}
+/* new popup  */
+.popup-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  position: relative; /*  Essential for positioning the popup overlay  */
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.popup-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.popup-card h3 {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.popup-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200; /* Ensures it's on top */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  text-align: left;
+  position: relative;
+}
+
+.close-popup-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.popup-detail-card {
+  flex: 0 0 auto;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.popup-detail-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.popup-detail-card h3 {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.popup-detail-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+@media (max-width: 1100px) {
+  /* service */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+  /* service */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+  }
+  .box {
+    background: linear-gradient(1deg, #e9ecff, #fff);
+    border-radius: 12px;
+    padding: 5px;
+    margin: 20px 0px;
+    color: #000000;
+  }
+
+  /* Responsive Navbar */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+  }
   .hamburger {
     display: flex;
   }
@@ -1139,6 +1284,7 @@ footer {
 
   .nav-links.show {
     display: flex;
+    z-index: 1000;
   }
 
   .nav-links li {
@@ -1148,10 +1294,12 @@ footer {
   .btn-primary {
     width: 100%;
   }
-}
 
-/* ========== Responsive Hero Section ========== */
-@media (max-width: 768px) {
+  /* ========== Responsive Hero Section ========== */
+  .landing,
+  .slideshow-container {
+    height: 50vh;
+  }
   .overlay-text {
     padding: 20px;
     width: 90%;
@@ -1174,11 +1322,143 @@ footer {
   .next {
     font-size: 28px;
     padding: 6px;
+    z-index: 5;
   }
 
   .dot {
     height: 10px;
     width: 10px;
+  }
+  .section-header {
+    margin-bottom: 0px;
+    background: linear-gradient(180deg, #e9ecff, #fff);
+  }
+  .caption {
+    padding: 0px 0px;
+    margin: 10px auto 10px;
+  }
+  .doctors-header {
+    background: linear-gradient(180deg, #e9ecff, #fff);
+  }
+
+  .services-slider .card {
+    width: 80%;
+  }
+  /* scroll bar*/
+  #scrollTopBtn {
+    bottom: 50px;
+    right: 20px;
+    padding: 12px 16px;
+    font-size: 18px;
+  }
+
+  /* Bottom Navigation Bar */
+  .bottom-nav {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #9e9e9e;
+  }
+
+  .nav-item.active {
+    color: #007bff; /* Active color */
+  }
+
+  .nav-item i {
+    font-size: 22px;
+  }
+
+  .nav-item span {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+   .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    overflow: hidden;
+  }
+  .popup-card {
+    width: 80%;
+    height: 100%;
+    justify-self: center;
+    padding: 10px;
+    margin: 10px;
+  }
+ 
+  .popup-card img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  .popup-card h3 {
+    margin-top: 0px;
+    font-size: 0.9rem;
+    color: #222;
+  }
+
+  .popup-card p {
+    font-size: 0.8rem;
+    color: #555;
+  }
+
+  .popup-detail-card {
+  flex: 0 0 auto;
+  width: 90%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 20px 10px;
+  transition: transform 0.3s;
+}
+
+.popup-detail-card img {
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.popup-detail-card h2 {
+  margin-top: 0.1rem;
+  font-size: 1.0rem;
+  color: #222;
+}
+
+.popup-detail-card p {
+  font-size: 0.8rem;
+  color: #555;
+}
+}
+
+/* floating bttn */
+/* Adjust on small screens */
+@media (max-width: 600px) {
+  #hotline-float {
+    font-size: 6px;
+    padding: 8px 8px;
+  }
+
+  #consultation-float {
+    font-size: 6px;
+    padding: 12px 10px;
   }
 }
 
@@ -1205,30 +1485,67 @@ footer {
     height: 8px;
     width: 8px;
   }
-}
 
-/* service */
-@media (max-width: 768px) {
-  .services-slider .card {
-    width: 80%;
-  }
-}
-
-@media (max-width: 480px) {
   .services-slider .card {
     width: 90%;
   }
-}
-/* floating bttn */
-/* Adjust on small screens */
-@media (max-width: 600px) {
-  #hotline-float {
-    font-size: 6px;
-    padding: 8px 8px;
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    overflow: hidden;
+  }
+  .popup-card {
+    width: 70%;
+    height: 90%;
+    justify-self: center;
+    padding: 15px;
+    margin: 10px;
+  }
+ 
+  .popup-card img {
+    width: 90%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  .popup-card h3 {
+    margin-top: 0px;
+    font-size: 0.9rem;
+    color: #222;
   }
 
-  #consultation-float {
-    font-size: 6px;
-    padding: 12px 10px;
+  .popup-card p {
+    font-size: 0.8rem;
+    color: #555;
   }
+
+  .popup-detail-card {
+  flex: 0 0 auto;
+  width: 80%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.popup-detail-card img {
+  width: 80%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.popup-detail-card h2 {
+  margin-top: 0.1rem;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.popup-detail-card p {
+  font-size: 0.6rem;
+  color: #555;
+}
 }
