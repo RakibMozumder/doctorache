@@ -12,7 +12,7 @@ const doctors = [
     id: 2,
     name: "Dr. Hasan Mahmud",
     specialty: "Dermatologist",
-    image: "images/doctor2.jpg",
+    image: "images/doctor2.webp",
     availability: "Tue–Thu (2 PM – 5 PM)",
     rating: 4.8,
     bio: "Dr. Hasan specializes in skin disorders, cosmetic dermatology, and acne treatment."
@@ -21,7 +21,7 @@ const doctors = [
     id: 3,
     name: "Dr. Laila Noor",
     specialty: "Gynecologist",
-    image: "images/doctor3.jpg",
+    image: "images/doctor3.webp",
     availability: "Sat–Mon (11 AM – 4 PM)",
     rating: 4.8,
     bio: "Dr. Laila has a rich experience in women's health, prenatal care, and hormonal therapy."
@@ -39,7 +39,7 @@ const doctors = [
     id: 5,
     name: "Dr. Hasan Mahmud",
     specialty: "Dermatologist",
-    image: "images/doctor5.jpg",
+    image: "images/doctor5.webp",
     availability: "Tue–Thu (2 PM – 5 PM)",
     rating: 4.8,
     bio: "Dr. Hasan specializes in skin disorders, cosmetic dermatology, and acne treatment."
@@ -48,7 +48,7 @@ const doctors = [
     id: 6,
     name: "Dr. Laila Noor",
     specialty: "Gynecologist",
-    image: "images/doctor6.jpg",
+    image: "images/doctor6.webp",
     availability: "Sat–Mon (11 AM – 4 PM)",
     rating: 4.8,
     bio: "Dr. Laila has a rich experience in women's health, prenatal care, and hormonal therapy."
@@ -66,7 +66,7 @@ const doctors = [
     id: 8,
     name: "Dr. Hasan Mahmud",
     specialty: "Dermatologist",
-    image: "images/doctor2.jpg",
+    image: "images/doctor2.webp",
     availability: "Tue–Thu (2 PM – 5 PM)",
     rating: 4.8,
     bio: "Dr. Hasan specializes in skin disorders, cosmetic dermatology, and acne treatment."
@@ -75,7 +75,7 @@ const doctors = [
     id: 9,
     name: "Dr. Laila Noor",
     specialty: "Gynecologist",
-    image: "images/doctor3.jpg",
+    image: "images/doctor3.webp",
     availability: "Sat–Mon (11 AM – 4 PM)",
     rating: 4.8,
     bio: "Dr. Laila has a rich experience in women's health, prenatal care, and hormonal therapy."
