@@ -18,7 +18,7 @@ const servicePosts = [
   {
     id: 2,
     title: "Dermatology",
-    image: "images/doctor2.jpg",
+    image: "images/doctor2.webp",
     description: "Treatment for all skin-related issues by expert dermatologists.",
     content: `
       <p>Our dermatologists offer treatment for a wide range of skin problems including acne, eczema, psoriasis, and skin cancer screenings.</p>
@@ -28,7 +28,7 @@ const servicePosts = [
     {
     id: 3,
     title: "Cardiology",
-    image: "images/doctor3.jpg",
+    image: "images/doctor3.webp",
     description: "Advanced diagnosis and treatment for all heart-related diseases.",
     content: `
       <p>Our Cardiology department is equipped with modern facilities for diagnosing and treating all types of cardiovascular conditions including arrhythmia, coronary artery disease, and heart failure.</p>
@@ -51,7 +51,7 @@ const servicePosts = [
     {
     id: 5,
     title: "Cardiology",
-    image: "images/doctor5.jpg",
+    image: "images/doctor5.webp",
     description: "Advanced diagnosis and treatment for all heart-related diseases.",
     content: `
       <p>Our Cardiology department is equipped with modern facilities for diagnosing and treating all types of cardiovascular conditions including arrhythmia, coronary artery disease, and heart failure.</p>
@@ -65,7 +65,7 @@ const servicePosts = [
   {
     id: 6,
     title: "Dermatology",
-    image: "images/doctor6.jpg",
+    image: "images/doctor6.webp",
     description: "Treatment for all skin-related issues by expert dermatologists.",
     content: `
       <p>Our dermatologists offer treatment for a wide range of skin problems including acne, eczema, psoriasis, and skin cancer screenings.</p>

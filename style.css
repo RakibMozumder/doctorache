@@ -1387,7 +1387,7 @@ footer {
     margin-top: 4px;
   }
 
-   .services-grid {
+  .services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -1400,7 +1400,7 @@ footer {
     padding: 10px;
     margin: 10px;
   }
- 
+
   .popup-card img {
     width: 90%;
     height: 150px;
@@ -1419,33 +1419,33 @@ footer {
   }
 
   .popup-detail-card {
-  flex: 0 0 auto;
-  width: 90%;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  padding: 20px 10px;
-  transition: transform 0.3s;
-}
+    flex: 0 0 auto;
+    width: 90%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 20px 10px;
+    transition: transform 0.3s;
+  }
 
-.popup-detail-card img {
-  width: 80%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 2px;
-}
+  .popup-detail-card img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
 
-.popup-detail-card h2 {
-  margin-top: 0.1rem;
-  font-size: 1.0rem;
-  color: #222;
-}
+  .popup-detail-card h2 {
+    margin-top: 0.1rem;
+    font-size: 1rem;
+    color: #222;
+  }
 
-.popup-detail-card p {
-  font-size: 0.8rem;
-  color: #555;
-}
+  .popup-detail-card p {
+    font-size: 0.8rem;
+    color: #555;
+  }
 }
 
 /* floating bttn */
@@ -1463,6 +1463,13 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .caption {
+    padding: 5px 10px;
+    margin: 10px auto 10px;
+  }
+  h2.caption {
+    font-size: 1em;
+  }
   .overlay-text {
     padding: 1rem;
   }
@@ -1491,61 +1498,143 @@ footer {
   }
   .services-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
     overflow: hidden;
   }
   .popup-card {
-    width: 70%;
+    width: 80%;
     height: 90%;
     justify-self: center;
-    padding: 15px;
-    margin: 10px;
+    padding: 5px;
+    margin: 15px 0px;
   }
- 
+
   .popup-card img {
-    width: 90%;
-    height: 120px;
+    width: 80%;
+    height: 100px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 2px;
   }
   .popup-card h3 {
     margin-top: 0px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #222;
   }
 
   .popup-card p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #555;
   }
 
   .popup-detail-card {
-  flex: 0 0 auto;
-  width: 80%;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  padding: 0.5rem;
-  transition: transform 0.3s;
-}
+    flex: 0 0 auto;
+    width: 90%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 0.8rem;
+  }
+  .popup-detail-card img {
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
 
-.popup-detail-card img {
-  width: 80%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 2px;
-}
+  .popup-detail-card h2 {
+    margin-top: 0.1rem;
+    font-size: 0.9rem;
+    color: #222;
+  }
 
-.popup-detail-card h2 {
-  margin-top: 0.1rem;
-  font-size: 0.9rem;
-  color: #222;
-}
+  .popup-detail-card p {
+    font-size: 0.6rem;
+    color: #555;
+  }
 
-.popup-detail-card p {
-  font-size: 0.6rem;
-  color: #555;
+  /* doctor */
+  .doctors-section {
+    padding: 1rem 1rem;
+  }
+
+  .doctors-header {
+    margin-bottom: 5px;
+  }
+
+  .caption h2 {
+    font-size: 1em;
+  }
+  .doctor-card {
+    height: 200px;
+    width: 200px;
+    padding: 0.5rem;
+  }
+  .doctor-card img {
+    width: 100%;
+    height: 100px;
+    border-radius: 2px;
+  }
+  .doctor-card h3 {
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+  }
+  .doctor-card p {
+    font-size: 0.7rem;
+  }
+
+  .carousel p {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .slider-card {
+    flex: 0 0 240px;
+    border-radius: 2px;
+    padding: 10px;
+  }
+  .slider-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0px;
+  }
+  /* blog */
+  .blog-content h3 {
+    font-size: 10px;
+    color: #111827;
+    margin-bottom: 10px;
+  }
+  .blog-content p {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .blog-content {
+    padding: 0px;
+  }
+
+  /* contact */
+  .contact-section {
+    padding: 15px 15px;
+  }
+  .contact-info h2 {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+  .contact-info p,
+  li {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+  }
+
+  .contact-container {
+    gap: 10px;
+  }
+
+  .close-popup-btn {
+    top: 0px;
+    right: 1px;
+    font-size: 13px;
 }
 }
