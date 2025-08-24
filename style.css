@@ -1256,6 +1256,11 @@ footer {
     margin: 20px 0px;
     color: #000000;
   }
+  .about-section p{
+
+    padding: 15px;
+
+  }
 
   /* Responsive Navbar */
   .header {
@@ -1567,7 +1572,7 @@ footer {
     font-size: 1em;
   }
   .doctor-card {
-    height: 200px;
+    height: 250px;
     width: 200px;
     padding: 0.5rem;
     justify-items: center;
@@ -1639,4 +1644,11 @@ footer {
     right: 1px;
     font-size: 13px;
   }
+  .btn-view {
+    margin-top: 0px;
+    padding: 5px 5px;
+    font-weight: 300;
+    font-size: 0.6em;
+  }
+
 }
