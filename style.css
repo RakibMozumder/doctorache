@@ -78,7 +78,7 @@ body {
   list-style: none;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -191,7 +191,7 @@ body {
   bottom: 20px;
   width: 100%;
   text-align: center;
-  z-index: 10;
+  z-index: 9;
 }
 
 .dot {
@@ -417,7 +417,7 @@ body {
 .btn-view:hover {
   background-color: #4c1d95;
 }
-/* new  Doctor Section */
+/* new  Doctor Section 
 .doctors-section {
   padding: 60px 20px;
   background-color: #f9f9ff;
@@ -1284,7 +1284,7 @@ footer {
 
   .nav-links.show {
     display: flex;
-    z-index: 1000;
+    z-index: 10000;
   }
 
   .nav-links li {
@@ -1570,6 +1570,8 @@ footer {
     height: 200px;
     width: 200px;
     padding: 0.5rem;
+    justify-items: center;
+    justify-self: center;
   }
   .doctor-card img {
     width: 100%;
@@ -1636,5 +1638,5 @@ footer {
     top: 0px;
     right: 1px;
     font-size: 13px;
-}
+  }
 }
